@@ -22,6 +22,14 @@ public class Shape extends JPanel {
 	private int[][] matrix;
 	private Point initialClick;
 	
+	/**
+	 * <h2> Description </h2>
+	 * Creates an instance of Shape, which inherits of JPanel to be drawn in the color given, depending on a two dimensions matrix of integers <br><br>
+	 * <code> Shape shape = new Shape("T-Block", Color.Yellow, matrix); </code> <br>
+	 * @param name The Shape's name (e.g. T-Block)
+	 * @param color The color the shape will be
+	 * @param matrix a 2 dimension matrix of integers, 0s will not be drew, 1s will be drew in the color given as parameter
+	 */
 	public Shape(String name, Color color, int[][] matrix) {
 		this.name = name;
 		this.color = color;
@@ -45,17 +53,34 @@ public class Shape extends JPanel {
 		
 	}
 	
+	/**
+	 * Getter for the color of your Shape
+	 * @return java.awt.Color
+	 */
 	public Color getColor() {
 		return color;
 	}
 	
+	/**
+	 * Getter for the matrix of your Shape
+	 * @return a two dimensions matrix of integers
+	 */
 	public int[][] getMatrix(){
 		return matrix;
 	}
+	
+	/**
+	 * Getter for the name of your Shape
+	 * @return java.lang.String
+	 */
 	public String getName() {
 		return name;
 	}
 	
+	/**
+	 * Draws the Shape, called when creating a Shape. <br>
+	 * Adding your Shape to any Frame or JPanel will draw it.
+	 */
 	@Override
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);

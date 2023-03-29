@@ -2,6 +2,9 @@ package fr.mimifan.tetrisia.enums;
 
 public class FrameVars {
 	
+	public static final int frameWidth = 400;
+	public static final int frameHeight = 700;
+	
 	public static final int NB_LIGNES = 20;
     public static final int NB_COLONNES = 10;
     
