@@ -5,6 +5,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import fr.mimifan.tetrisia.listeners.TetrisKeyListener;
+
 public class Main {
 	
 	private static int hauteur=700,largeur=400;
@@ -20,9 +22,11 @@ public class Main {
 		frame.setResizable(false);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
+		frame.addKeyListener(new TetrisKeyListener());
 		frame.getContentPane().add(mainPanel, BorderLayout.CENTER);
 		frame.pack();
 		frame.setVisible(true);
+		new TetrisPart();
 	}
 	
 	
